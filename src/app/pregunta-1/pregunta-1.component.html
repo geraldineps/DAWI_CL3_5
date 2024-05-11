@@ -1,1 +1,26 @@
-<p>pregunta-1 works!</p>
+<div class="card">
+    <div class="card-header">
+        <h2>Calculo de utilidades</h2>
+    </div>
+    <div class="card-body">
+        <div class="mb-3">
+            <label for="txtsalario" class="form-label">Ingrese Salario</label>
+            <input type="number" class="form-control" [(ngModel)]="utilidades.salario"
+            id="txtsalario" placeholder="Ingrese Numero">
+        </div>
+        <div class="mb-3">
+            <label for="txtanios" class="form-label">Ingrese años de servicisio</label>
+            <input type="number" class="form-control" [(ngModel)]="utilidades.anios"
+            id="txtanios" placeholder="Ingrese Numero">
+        </div>
+
+          <button type="button"(click)="calcularUtilidades()" 
+          class="btn btn-primary">CALCULAR</button>
+          <hr/>
+          @if (mostrarResultado) {
+          <div class="alert alert-primary" role="alert">
+            {{utilidades.resultado}}
+          </div>
+        }
+    </div>
+  </div>
