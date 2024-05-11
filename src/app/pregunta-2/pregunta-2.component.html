@@ -1,1 +1,41 @@
-<p>pregunta-2 works!</p>
+<div class="card">
+    <div class="card-header">
+        <h2>Ingresar 5 números y calcular el mayor</h2>
+    </div>
+    <div class="card-body">
+        <div class="mb-3">
+            <label for="txtnumero1" class="form-label">Ingrese Numero</label>
+            <input type="number" class="form-control" [(ngModel)]="numeros.numero1"
+            id="txtnumero1" placeholder="Ingrese Numero">
+        </div>
+        <div class="mb-3">
+            <label for="txtnumero2" class="form-label">Ingrese Numero</label>
+            <input type="number" class="form-control" [(ngModel)]="numeros.numero2"
+            id="txtnumero2" placeholder="Ingrese Numero">
+        </div>
+        <div class="mb-3">
+            <label for="txtnumero3" class="form-label">Ingrese Numero</label>
+            <input type="number" class="form-control" [(ngModel)]="numeros.numero3"
+            id="txtnumero3" placeholder="Ingrese Numero">
+        </div>
+        <div class="mb-3">
+            <label for="txtnumero4" class="form-label">Ingrese Numero</label>
+            <input type="number" class="form-control" [(ngModel)]="numeros.numero4"
+            id="txtnumero4" placeholder="Ingrese Numero">
+        </div>
+        <div class="mb-3">
+            <label for="txtnumero5" class="form-label">Ingrese Numero</label>
+            <input type="number" class="form-control" [(ngModel)]="numeros.numero5"
+            id="txtnumero5" placeholder="Ingrese Numero">
+        </div>
+
+          <button type="button"(click)="calcularMayor()" 
+          class="btn btn-primary">CALCULAR</button>
+          <hr/>
+          @if (mostrarResultado) {
+          <div class="alert alert-primary" role="alert">
+            {{numeros.resultado}}
+          </div>
+        }
+    </div>
+  </div>
