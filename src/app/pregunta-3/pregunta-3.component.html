@@ -1,0 +1,32 @@
+<div class="card">
+    <div class="card-header">
+      Formulario Puntaje Equipo
+    </div>
+    <div class="card-body">
+      <div class="mb-3">
+        <label for="txtpartidosganados" class="form-label">Partidos ganados:</label>
+        <input type="number" class="form-control"
+        [(ngModel)]="equipo.ganados" 
+        id="txtpartidosganados" placeholder="Partidos ganados">
+      </div>
+      <div class="mb-3">
+        <label for="txtpartidosperdidos" class="form-label">Partidos perdidos:</label>
+        <input type="number" class="form-control"
+        [(ngModel)]="equipo.perdidos" 
+        id="txtpartidosperdidos" placeholder="Partidos perdidos">
+      </div>
+      <div class="mb-3">
+        <label for="txtpartidosempatados" class="form-label">Partidos empatados:</label>
+        <input type="number" class="form-control" 
+        [(ngModel)]="equipo.empatados" 
+        id="txtpartidosempatados" placeholder="Partidos empatados">
+      </div>
+      <button type="button" (click)="calcularPuntos()" 
+      class="btn btn-primary">Calcular Puntos</button>
+      @if (mostrarResultado) {
+        <div class="alert alert-primary" role="alert">
+          Puntos totales del equipo: {{ equipo.puntajeTotal}}
+        </div>
+        }
+    </div>
+  </div>
